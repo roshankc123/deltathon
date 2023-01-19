@@ -1,0 +1,174 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .diseaselandingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/servicebg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Inter;
+
+       
+    }
+
+
+
+
+
+.diseaselandingtop h1{
+    font-size: 38px;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 0.03em;
+}
+.diseaselandingtop p{
+    font-size: 14px;
+    font-weight: 400;
+    padding:10px 0;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+}
+.diseaselandingtop .servicesearch{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.diseaselandingtop .servicesearch input{
+    font-family: Inter;
+    padding:10px 40px;
+    border-radius: 5px;
+    border:none;
+
+}
+.diseaselandingtop .servicesearch .searchlogo{
+    padding:9px;
+    background-color: white;
+    color:#819347;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diseaselandingtop .servicesearch input::placeholder{
+letter-spacing: 0.03em;
+color:rgb(158, 148, 148);
+font-family: Inter;
+color:#819347;
+
+}
+
+.diseasecontent{
+    padding:15px;
+    text-align: left;
+}
+
+.diseasecontent h1{
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    color:#819347;
+    text-align: left;
+}
+.diseasecontainer{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.diseasecontainer .diseasecard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.diseasecontainer .diseasecard .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding:10px;
+    color:#819347
+
+}
+
+.diseasecontainer .diseasecard .cropname{
+    padding:10px;
+    color:#819347;
+
+
+
+}
+
+.diseasecontainer .diseasecard .cropname h1{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+
+}
+/* .diseasecontainer .diseasecard .cropname h2{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    
+} */
+
+
+.diseasecontainer .diseasecard .harvestbutton{
+    text-decoration: none;
+    background-color: #819347;
+    color:white;
+    padding:10px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+
+
+}
+
+
+.modal{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    background-color: #F0F0F0;
+
+
+
+}
+
+.modal h2{
+    text-align: left;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color:#819347;
+    padding:10px;
+}
+
+
+}

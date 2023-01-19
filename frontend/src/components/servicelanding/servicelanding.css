@@ -1,0 +1,219 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .servicelandingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/servicebg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Inter;
+
+       
+    }
+    .servicelandingcontent{
+        background-color: #F0F0F0;
+    }
+
+    .servicelandingtop{
+        
+    }
+
+    .servicelandingtop h1{
+        font-size: 38px;
+        font-weight: 600;
+        padding-top: 40px;
+        letter-spacing: 0.03em;
+    }
+    .servicelandingtop p{
+        font-size: 14px;
+        font-weight: 400;
+        padding:10px 0;
+        letter-spacing: 0.04em;
+        line-height: 20px;
+    }
+    .servicelandingtop .servicesearch{
+        display: flex;
+        flex-direction: row ;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .servicelandingtop .servicesearch input{
+        font-family: Inter;
+        padding:10px 40px;
+        border-radius: 5px;
+        border:none;
+
+    }
+    .servicelandingtop .servicesearch .searchlogo{
+        padding:9px;
+        background-color: white;
+        color:#819347;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .servicelandingtop .servicesearch input::placeholder{
+    letter-spacing: 0.03em;
+    color:rgb(158, 148, 148);
+    font-family: Inter;
+    color:#819347;
+
+    }
+    .servicelandingcontent{
+        text-align: left;
+        color:#819347;
+        padding:15px;
+        font-family: Inter;
+    }
+    .servicelandingcontent h1{
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .servicelandingcontent .servicecontainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .servicelandingcontent .servicecontainer .servicecard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        width:100px;
+
+    }
+    .servicelandingcontent .servicecontainer .servicecard .servicelogo{
+        background-color: #819347;
+        color:white;
+        padding:15px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+
+    }
+
+    .servicelandingcontent .servicecontainer .servicecard h3{
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.04em;
+    }
+    .previouslogs{
+        font-family: Inter;
+        text-align: left;
+        color:#819347;
+        padding:15px;
+        background-color: #F0F0F0;
+
+    }
+    .previouslogs h1{
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .previouslogs .logcontainer{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+.previouslogs .logcard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+}
+.previouslogs .logcard .date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10px;
+    color:#819347;
+
+}
+    .previouslogs .logcard .date h3{
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.03em;
+
+
+    }
+
+
+.previouslogs .logcard .cropname{
+    padding:10px;
+    color:#819347;
+    border-left: 1px solid rgb(240, 236, 236);
+    border-right: 1px solid rgb(240, 236, 236);
+
+
+
+
+}
+
+.previouslogs .logcard .cropname h1{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+
+}
+.previouslogs .logcard .work {
+
+
+}
+
+
+.previouslogs .logcard .work h1{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+
+
+
+}
+
+
+.previouslogs .logcard a{
+    text-decoration: none;
+    background-color: #819347;
+    color:white;
+    padding:10px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius:0px 10px 10px 0px;
+
+
+
+
+}
+
+
+}

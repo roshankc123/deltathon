@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+}
+@media only screen and (max-width: 400px){
+
+/* .nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #819347;
+    color:white;
+    font-family: Inter;
+    padding:10px 30px;
+    position: fixed;
+    width:100%;
+    bottom:0;
+} */
+
+.navig{
+    display: flex;
+    flex-direction: row;
+    background-color: #819347;
+    justify-content: space-between;
+    padding:15px 30px;
+    position: fixed;
+    bottom:0;
+    right:0;
+    left:0;
+}
+.navig a{
+    text-decoration: none;
+    color:white;
+
+}
+.navig h3{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+
+}
+
+}

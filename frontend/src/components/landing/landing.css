@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .landingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/landingbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+
+
+       
+    }
+
+       
+   
+    .landingtop .a h1{
+        font-family: Inter;
+        font-size: 35px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+    
+    }
+    .landingtop .a h2{
+        font-family: Inter;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+    
+    }
+    .landingtop .b{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .landingtop .sun{
+        font-size: 60px;
+    }
+    .landingtop .bl h3{
+        font-size: 22px;
+        font-family: Inter;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        width:80%;
+    }
+    .landingtop .br h4{
+        font-size: 40px;
+    }
+    .soiltoday{
+    text-align: left;
+    padding:10px;
+    background-color: #F0F0F0;
+
+
+    }
+    .soiltoday h1{
+        font-size: 20px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+        color:#819347;
+    }
+    .soilcontainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .soiltoday .soilcontainer .soilcard{
+        background-color: #819347;
+        color:white;
+        border-radius: 5px;
+        /* box-shadow: 5px 15px 5px 15px; */
+        padding:10px;
+    }
+    .soilcontainer .soilcard h3{
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+    }
+    .soilcontainer .soilcard h4{
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+
+    }
+}
