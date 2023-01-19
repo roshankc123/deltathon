@@ -4,7 +4,7 @@ data =  { 'Cauliflower' : [
             # 'id' : '',
             'title' : 'Irrigation',
             'subtitle' : 'First day of the planting, So please put some water, Not so much that the seedling gets blown away.',
-            'endday' : 1,
+            'endday' : 0,
             'endtime' : (1 * 86400) + int(time.time()),
             'is_done' : False,
             '_time' : int(time.time())
@@ -293,4 +293,4 @@ data =  { 'Cauliflower' : [
 for temp in data['Cauliflower']:
     # endday = int(((temp['endtime']) - int(time.time())) / 86400)   #endtime means end
     day = int((int(time.time()) - (temp['_time'])) / 86400)
-    print(day == temp['endday']) #temp['endday'])
+    print(day) #temp['endday'])
