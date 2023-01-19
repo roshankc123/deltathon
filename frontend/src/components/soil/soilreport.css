@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .soillandingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/soilbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Inter;
+
+       
+    }
+    .soilreport{
+        font-family: Inter;
+    }
+
+    
+.soillandingtop h1{
+    font-size: 38px;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 0.03em;
+}
+.soillandingtop p{
+    font-size: 14px;
+    font-weight: 400;
+    padding:10px 0;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+}
+
+.soilcamera{
+    font-size:25px;
+    
+}
+.soillandingtop{
+}
+
+.clickable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    margin-top: 15px;
+
+    
+}
+.clickable h3{
+    font-family: Inter;
+    font-weight: 500;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    background-color: #819347;
+    padding:10px 20px;
+    border-radius: 5px;
+
+
+}
+
+.soilcamera{
+    margin-left: 30px;
+    background-color: #819347;
+    padding:7px;
+    border-radius: 5px;
+}
+
+.soilreport .soilcontent{
+    color:#819347;
+    text-align: left;
+    padding:15px 20px;
+    letter-spacing: 0.03em;
+}
+.soilreport .soilcontent h2{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 18px;
+}
+.soilreport .soilcontent p{
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 8px;
+    
+
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #F0F0F0;
+
+
+
+}
+
+.modal .camera{
+    border:3px solid yellow;
+    height:100vh;
+}
+
+.modal h2{
+    text-align: left;
+    font-weight: 600;
+    font-size: 22px;
+    color:#F0F0F0;
+    padding:10px;
+    background-color: #819347;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.capturebuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.capturebuttons button{
+    padding:10px 20px;
+    border:none;
+    background-color: #819347;
+    color:white;
+    font-family: Inter;
+    letter-spacing: 0.03em;
+    font-size: 15px;
+
+}
+
+
+
+
+}

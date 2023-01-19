@@ -4,6 +4,7 @@ import Homepage from './pages/homepage'
 import Servicepage from './pages/servicepage'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Diseasepage from './pages/diseasepage';
+import Soilpage from './pages/soilpage';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <Route exact path='/home' element={<Homepage/>}/>
             <Route exact path='/services' element={<Servicepage/>}/>
             <Route exact path='/services/disease' element={<Diseasepage/>}/>
+            <Route exact path='/services/soil' element={<Soilpage/>}/>
             
         </Routes>
       

@@ -1,19 +1,11 @@
-import './disease.css'
-import { FaSearch } from 'react-icons/fa';
-import {MdDoubleArrow} from 'react-icons/md'
-import {GiPlantRoots} from 'react-icons/gi'
 import React, {useState} from 'react';
+import './soilreport.css'
 import {AiFillCamera} from 'react-icons/ai'
 import {FaArrowLeft} from 'react-icons/fa'
-import { Link } from 'react-router-dom';
 import {ImCross} from 'react-icons/im'
 
 
-
-
-
-
-
+import { Link } from 'react-router-dom';
 import Webcam from 'react-webcam'
 import Footer from '../footer/footer';
 const WebcamComponent = () => <Webcam />
@@ -25,19 +17,10 @@ const videoConstraints = {
 }
 
 
-const Disease = () =>{
+const SoilReport = () =>{
 
-    const [modal, setmodal] = useState({
-        status:false,
-        name:''
-    })
+    const [cameramodal, setcameramodal] = useState(false)
     const [reportmodal, setreportmodal] = useState(false)
-    const [report, setreport] = useState({
-        disease_name:'',
-        information:'',
-        symptoms:'',
-        treatment:''
-    })
 
     const [picture, setPicture] = useState('')
     const webcamRef = React.useRef(null)
@@ -58,7 +41,7 @@ const Disease = () =>{
         }
         else {
             let formData = new FormData()
-            formData.append('name', modal.name);
+            // formData.append('name', "ramdom");
             // const byteCharacters = picture
             // const byteNumbers = new Array(byteCharacters.length);
             // for (let i = 0; i < byteCharacters.length; i++) {
@@ -120,81 +103,33 @@ const Disease = () =>{
             // }
         }}
 
-
-
-
-
-
-
-
-
-    const plants = [
-        {
-            name:'Apple',
-            image:'',
-            icon:<GiPlantRoots/>
-        },
-        {
-            name:'Maize',
-            image:'',
-            icon:<GiPlantRoots/>
-        },
-        {
-            name:'Rice',
-            image:'',
-            icon:<GiPlantRoots/>
-        },
-        {
-            name:'Potato',
-            image:'',
-            icon:<GiPlantRoots/>
+        const showreport =()=>{
+            setcameramodal(false)
+            setreportmodal(!reportmodal)
         }
-    ]
-    console.log(modal)
-    const showreport =()=>{
-        setmodal({status:false})
-        setreportmodal(!reportmodal)
-    }
-    const closeandreload=()=>{
-        window.location.reload(true)
-    }
+        const closeandreload=()=>{
+            window.location.reload(true)
+        }
+
+
 
     return(
-        <div className='disease'>
-            <div className='diseaselandingtop'>
-                <h1>Disease</h1>
+        <div className='soilreport'>
+            <div className='soillandingtop'>
+                <h1>Soil Profiling</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
-                <div className='servicesearch'>
-                    <input placeholder='Enter your plant'></input>
-                    <div className='searchlogo'>
-                        <FaSearch/>
-                    </div>
-                </div>
+                <div className='clickable'><h3>Know your soil</h3><AiFillCamera className='soilcamera' onClick={()=>setcameramodal(true)}/></div>
             </div>
-            <div className='diseasecontent'>
-                <h1>Select the Crop</h1>
-                <div className='diseasecontainer'>
-                    {
-                        plants.map((plant, key)=>(
-                            <div className='diseasecard' key={key}>
-                                <div className='image'>
-                                    {plant.icon}
-                                </div>
-                                <div className='cropname'>
-                                    <h1>{plant.name}</h1>
-                                </div>
-                                <div className='harvestbutton' onClick={()=>setmodal({status:true, name:plant.name})}>
-                                    <MdDoubleArrow/>
-                                </div>   
-                            </div>
-                        ))
-                    }
-                </div>
+            <div className='soilcontent'>
+                <h2>Why Soil Profiling?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+
             </div>
-            {modal.status===true &&
-            <div className='modal'>
+            {
+                cameramodal===true &&
+                <div className='modal'>
                 <div className='modalcontainer'>
-                    <h2><Link style={{color:'white',textDecoration:'none', display:'flex',alignItems:'center'}} onClick={()=>window.location.reload(true)} to="/services/disease"><FaArrowLeft/></Link>&nbsp;&nbsp;Capture an image</h2>
+                    <h2><Link style={{color:'white',textDecoration:'none', display:'flex',alignItems:'center'}} onClick={()=>window.location.reload(true)} to="/services/soil"><FaArrowLeft/></Link>&nbsp;&nbsp;Capture an image</h2>
                     <div>
                         {picture === '' ? (
                             <Webcam
@@ -228,14 +163,14 @@ const Disease = () =>{
                     
                 </div>
             </div>
-}
-{
+            }
+            {
     reportmodal===true &&
     <div className='reportmodal'>
         <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
         <div className='reportmodalcontent'>
         <div className='title'>
-            <img src="../images/reportheader.png"></img><h1>Disease report on {modal.name}</h1>
+            <img src="../images/reportheader.png"></img><h1>Disease report on</h1>
         </div>
         <div className='reportcontent'>
             <div className='name'>Disease: <span>Jaundice</span></div>
@@ -271,12 +206,8 @@ const Disease = () =>{
     </div>
 
 }
-
-
-
         </div>
-        
     )
 }
 
-export default Disease;
+export default SoilReport;
