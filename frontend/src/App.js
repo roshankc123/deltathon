@@ -5,6 +5,8 @@ import Servicepage from './pages/servicepage'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Diseasepage from './pages/diseasepage';
 import Soilpage from './pages/soilpage';
+import SimpleMap from './components/vetenarymaps/vetenary';
+
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
             <Route exact path='/services' element={<Servicepage/>}/>
             <Route exact path='/services/disease' element={<Diseasepage/>}/>
             <Route exact path='/services/soil' element={<Soilpage/>}/>
-            
+            <Route exact path='services/vetenarymaps' element={<SimpleMap/>}/>
         </Routes>
       
       </div>
