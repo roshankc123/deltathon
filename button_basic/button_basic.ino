@@ -25,6 +25,7 @@
 const int buttonPin = 14;  
 
 int buttonState = 0;  
+int buttonLock = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -33,6 +34,18 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(buttonPin);
-  Serial.println(buttonState);
-  delay(2000);
+  if(buttonState == 1 && buttonLock == 0){    /////ensure and make a long press as one, write main code inside
+    buttonLock = 1;
+    Serial.println(buttonState);
+  }
+
+  if(buttonState == 0){
+    buttonLock = 0;
+  }
+
+  // if(buttonLock == 0 && buttonState == 1){
+  //   Serial.println(buttonState);
+  // }
+  
+  // delay(2000);
 }
