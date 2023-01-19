@@ -1,0 +1,16 @@
+{
+    "Apple":{
+        "Apple_scab":{
+            "Information":"",
+            "Symptoms":"",
+            "Image":"Images_Disease/Apple_Scab.jpeg",
+            "Treatment":{
+                "1":"Remove and destroy the fallen leaf litter so that the fungus cannot overwinter. This may reduce the disease pressure in the following spring, but will not likely eliminate the disease.",
+                "2":"Do not overcrowd plants, and make sure the canopy has proper airflow. This will decrease the conditions favorable for disease development.",
+                "3":"Fungicide applications at 2-week intervals begin when new growth is expanding in the spring.",
+                "4":"Crabapple cultivars that are resistant to apple scab are widely available."
+            }
+        }
+    }
+
+}
