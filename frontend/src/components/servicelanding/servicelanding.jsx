@@ -31,16 +31,16 @@ const Servicelanding = () =>{
                 </h1>
                 <div className='servicecontainer'>
                     <div className='servicecard'>
-                        <VscMention className='servicelogo'/>
+                        <a href="/services/croprecommend"><VscMention className='servicelogo'/></a>
                         <h3>Crop Recommendation</h3>
                     </div>
                     
                     <div className='servicecard'>
-                        <Link to="/services/disease"><GiBugNet className='servicelogo'/></Link>
+                        <a href="/services/disease"><GiBugNet className='servicelogo'/></a>
                         <h3>Disease Detection</h3>
                     </div>
                     <div className='servicecard'>
-                        <RiMedicineBottleLine className='servicelogo'/>
+                        <a href="/services/fertilizerrecommend"><RiMedicineBottleLine className='servicelogo'/></a>
                         <h3>Fertilizer Recommendation</h3>
                     </div>
                     <div className='servicecard'>
@@ -48,11 +48,11 @@ const Servicelanding = () =>{
                         <h3>Crop Monitoring</h3>
                     </div>
                     <div className='servicecard'>
-                    <Link to="/services/soil"><TbReport className='servicelogo'/></Link>
+                    <a href="/services/soil"><TbReport className='servicelogo'/></a>
                         <h3>Soil Report</h3>
                     </div>
                     <div className='servicecard'>
-                        <Link to="/services/soil"><GoBook className='servicelogo'/></Link>
+                        <a href="/services/agropedia"><GoBook className='servicelogo'/></a>
                         <h3>Agropedia</h3>
                     </div>
                     <div className='servicecard'>
@@ -64,7 +64,7 @@ const Servicelanding = () =>{
                         <h3>Call a Doctor</h3>
                     </div>
                     <div className='servicecard'>
-                        <Link to="/services/vetenarymaps"><BiMap className='servicelogo'/></Link>
+                        <a href="/services/vetenarymaps"><BiMap className='servicelogo'/></a>
                         
                         <h3>Vetenary Near Me</h3>
                     </div>

@@ -28,8 +28,8 @@ const SeasonHarvest = () =>{
                         <GiPlantRoots/>
                     </div>
                     <div className='cropname'>
-                        <h1>Maize</h1>
-                        <h2>32 days since harvest</h2>
+                        <h1>Rice</h1>
+                        <h2>20 days since harvest</h2>
                     </div>
                     <a href="#" className='harvestbutton'>
                         <MdDoubleArrow/>
@@ -40,8 +40,8 @@ const SeasonHarvest = () =>{
                         <GiPlantRoots/>
                     </div>
                     <div className='cropname'>
-                        <h1>Maize</h1>
-                        <h2>32 days since harvest</h2>
+                        <h1>Sugarccane</h1>
+                        <h2>16 days since harvest</h2>
                     </div>
                     <a href="#" className='harvestbutton'>
                         <MdDoubleArrow/>
@@ -51,8 +51,8 @@ const SeasonHarvest = () =>{
                         <GiPlantRoots/>
                     </div>
                     <div className='cropname'>
-                        <h1>Maize</h1>
-                        <h2>32 days since harvest</h2>
+                        <h1>Apple</h1>
+                        <h2>75 days since harvest</h2>
                     </div>
                     <a href="#" className='harvestbutton'>
                         <MdDoubleArrow/>

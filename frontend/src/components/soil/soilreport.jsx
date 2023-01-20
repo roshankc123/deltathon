@@ -71,7 +71,7 @@ const SoilReport = () =>{
             //     .then(response => response.json())
             //     .then(response => console.log(response.json))
 
-            const url = "#"
+            const url = "https://192.168.43.164:8000/predictsoil"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -80,6 +80,9 @@ const SoilReport = () =>{
                 body: formData,
 
             });
+            const x = await response.json()
+          
+            setreportdata(x)
             // axios({
   
             //     url: "https://192.168.10.69:8000/predictdisease",
@@ -102,10 +105,12 @@ const SoilReport = () =>{
             //     .catch((err) => { });
             // }
         }}
+        const [reportdata, setreportdata] = useState('')
 
         const showreport =()=>{
             setcameramodal(false)
             setreportmodal(!reportmodal)
+            console.log(reportdata.name)
         }
         const closeandreload=()=>{
             window.location.reload(true)
@@ -168,41 +173,17 @@ const SoilReport = () =>{
             }
             {
     reportmodal===true &&
-    <div className='reportmodal'>
+    <div className='reportmodal' style={{right:0}}>
         <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
         <div className='reportmodalcontent'>
         <div className='title'>
             <img src="../images/reportheader.png"></img><h1>Soil Report</h1>
         </div>
         <div className='reportcontent'>
-            <div className='name'>Disease: <span>Jaundice</span></div>
-            <p className='information'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div className='symptoms'>
-                <h2>Symptoms</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                </ul>
-            </div>
-            <div className='symptoms'>
-                <h2>Treatment</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <br/>
-                </ul>
-                
-
-            </div>
+            <div className='name'>Soil Type: <span>{reportdata}</span></div>
+            <p className='information'>Some description on the soil.</p>
+            
+            
         </div>
         </div>
     </div>

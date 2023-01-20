@@ -5,11 +5,20 @@ import Servicepage from './pages/servicepage'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Diseasepage from './pages/diseasepage';
 import Soilpage from './pages/soilpage';
+import Croprecommendpage from './pages/croprecommendpage';
+import FertilizerRecommendpage from './pages/fertilizerrecommendpage';
+import Agropediapage from './pages/agropediapage';
 import SimpleMap from './components/vetenarymaps/vetenary';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, [])
   return (
     <Router>
       <div className="App">

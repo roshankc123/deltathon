@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { ImCross } from 'react-icons/im';
 import './fertilizerrecommend.css'
 import {SiOpencollective} from 'react-icons/si'
@@ -8,37 +8,82 @@ import {MdDoubleArrow} from 'react-icons/md'
 
 
 const FertilizerRecommend = () =>{
-    const [data, setdata]= useState({
-        n:'3',
-        p:'2',
-        k:'4',
-        temperature:'2',
-        soil_type:'6',
-        crop_type:'Maize',
-        humidity:'5',
-        moisture:'6',
-    })
+
+    useEffect(() => {
+
+        const fetchData = () =>{
+        fetch('https://192.168.43.164:8000/update')
+        .then((response) => response.json())
+        .then((data)=>{
+            setdata({
+                n:data[0],
+                p:data[1],
+                k:data[2],
+                temperature:data[3],
+                soil_type:"",
+                crop_type:"",
+                humidity:data[4],
+                moisture:data[5],
+    
+    
+            })
+        }
+
+        )
+    }
+
+        const timer = setTimeout(() => {
+            fetchData();
+          }, 2000);
+        
+      });
+
+
+
+
+
+
+
+
+    const [data, setdata]= useState({})
     const [modal, setmodal]= useState(false)
-    const [report, setreport] = useState(false)
     const closeandreload=()=>{
         window.location.reload(true)
     }
+    const [report, setreport] = useState(false)
+    const [reportdata, setreportdata] = useState('')
     
     const handlesubmit=e=>{
         e.preventDefault();
-        console.log(data)
-            fetch("#", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-type": "application/json",
-                    // 'X-CSRFToken': csrftoken
-                }
-            })
+        fetch('https://192.168.43.164:8000/predictfertilizer')
+        .then((response) => response.json())
+        .then((data)=>{
+            setreportdata(data)
+            
+        })
+        setmodal(false)
+        setreport(true)
 
-                .then(response => response.json())
-            setmodal(false)
-            setreport(true)
+
+
+
+
+
+
+
+        // console.log(data)
+        //     fetch("#", {
+        //         method: "POST",
+        //         body: JSON.stringify(data),
+        //         headers: {
+        //             "Content-type": "application/json",
+        //             // 'X-CSRFToken': csrftoken
+        //         }
+        //     })
+
+        //         .then(response => response.json())
+        //     setmodal(false)
+        //     setreport(true)
 
 
 
@@ -66,9 +111,9 @@ const FertilizerRecommend = () =>{
         {
             report===true &&
             <div className='possiblereport'>
-                <h3>Fertilizer Recommended: <span>Urea</span></h3>
+                <h3>Fertilizer Recommended: <span>{reportdata}</span></h3>
                 <div className='possiblecontainer'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Some description in the fertilizer</p>
                     
                     
                     
@@ -82,7 +127,7 @@ const FertilizerRecommend = () =>{
             {
                 modal===true &&
                     <div className='modal'>
-                        <div className='reportmodal'>
+                        <div className='reportmodal' data-aos="fade-up">
                             <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
                         <div className='reportmodalcontent'>
                         <div className='title'>

@@ -59,6 +59,7 @@
 .modal .inputs{
     text-align: left;
     padding:20px 40px; 
+    width:300px;
 }
 .modal .input_field h4{
     color:#819347;

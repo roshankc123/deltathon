@@ -22,7 +22,7 @@ const WebcamComponent = () => <Webcam />
 const videoConstraints = {
     width: 400,
     height: 400,
-    facingMode: 'user'
+    facingMode: { exact: "environment" }
 
 }
 
@@ -35,6 +35,7 @@ const Disease = () =>{
     })
     const [reportmodal, setreportmodal] = useState(false)
     const [report, setreport] = useState({
+        crop:'',
         disease_name:'',
         information:'',
         symptoms:'',
@@ -68,7 +69,7 @@ const Disease = () =>{
             console.log(formData)
 
           
-            const url = "#"
+            const url = "https://192.168.43.164:8000/predictdisease"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -76,9 +77,21 @@ const Disease = () =>{
                      },
                 body: formData,
 
-            });
+            }
+            );
+            const x = await response.json()
+            // console.log(x.description.name)
+            // console.log(x.description.Information)
+            // console.log(x.description.Treatment)
+            setreport({
+                disease_name:x.description.name,
+                information:x.description.Information,
+                treatment:x.description.Treatment,
+                crop:x.crop,
+            })
          
         }}
+
 
 
 
@@ -99,11 +112,11 @@ const Disease = () =>{
             image:'',
             icon:<GiCorn/>
         },
-        {
-            name:'Rice',
-            image:'',
-            icon:<GiPlantRoots/>
-        },
+        // {
+        //     name:'Rice',
+        //     image:'',
+        //     icon:<GiPlantRoots/>
+        // },
         {
             name:'Potato',
             image:'',
@@ -139,7 +152,7 @@ const Disease = () =>{
                     {
                         plants.map((plant, key)=>(
                             <div className='diseasecard' key={key}>
-                                <div className='image'>
+                                <div className='image' style={{fontSize:'30px'}}>
                                     {plant.icon}
                                 </div>
                                 <div className='cropname'>
@@ -193,36 +206,30 @@ const Disease = () =>{
 }
 {
     reportmodal===true &&
-    <div className='reportmodal'>
+    <div className='reportmodal' data-aos="fade-up">
         <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
         <div className='reportmodalcontent'>
         <div className='title'>
-            <img src="../images/reportheader.png"></img><h1>Disease report on {modal.name}</h1>
+            <img src="../images/reportheader.png"></img><h1>Disease report on {report.crop}</h1>
         </div>
         <div className='reportcontent'>
-            <div className='name'>Disease: <span>Jaundice</span></div>
-            <p className='information'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div className='name'>Disease: <span>{report.disease_name}</span></div>
+            <p className='information'>{report.information}</p>
             <div className='symptoms'>
-                <h2>Symptoms</h2>
+                {/* <h2>Symptoms</h2>
                 <ul>
                     <li>Lorem ipsum dolor sit</li>
                     <li>Lorem ipsum dolor sit</li>
                     <li>Lorem ipsum dolor sit</li>
                     <li>Lorem ipsum dolor sit</li>
-                </ul>
+                </ul> */}
             </div>
             <div className='symptoms'>
                 <h2>Treatment</h2>
                 <ul>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
+                    
+                        {report.treatment}
+                    
                     <br/>
                 </ul>
                 
