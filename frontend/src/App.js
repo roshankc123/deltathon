@@ -5,7 +5,9 @@ import Servicepage from './pages/servicepage'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Diseasepage from './pages/diseasepage';
 import Soilpage from './pages/soilpage';
-import CropRecommend from './components/croprecommendation/croprecommend';
+import Croprecommendpage from './pages/croprecommendpage';
+import FertilizerRecommendpage from './pages/fertilizerrecommendpage';
+import Agropediapage from './pages/agropediapage';
 
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
             <Route exact path='/services' element={<Servicepage/>}/>
             <Route exact path='/services/disease' element={<Diseasepage/>}/>
             <Route exact path='/services/soil' element={<Soilpage/>}/>
-            <Route exact path='/services/croprecommend' element={<CropRecommend/>}/>
+            <Route exact path='/services/croprecommend' element={<Croprecommendpage/>}/>
+            <Route exact path='/services/fertilizerrecommend' element={<FertilizerRecommendpage/>}/>
+            <Route exact path='/services/agropedia' element={<Agropediapage/>}/>
             
         </Routes>
       

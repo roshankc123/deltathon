@@ -31,7 +31,7 @@ const Servicelanding = () =>{
                         <h3>Disease Detection</h3>
                     </div>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
+                    <Link to="/services/fertilizerrecommend"><FaSearch className='servicelogo'/></Link>
                         <h3>Fertilizer Recommendation</h3>
                     </div>
                     <div className='servicecard'>
@@ -43,8 +43,8 @@ const Servicelanding = () =>{
                         <h3>Soil Report</h3>
                     </div>
                     <div className='servicecard'>
-                        <Link to="/services/soil"><FaSearch className='servicelogo'/></Link>
-                        <h3>Soil Report</h3>
+                        <Link to="/services/agropedia"><FaSearch className='servicelogo'/></Link>
+                        <h3>Agropedia</h3>
                     </div>
                     <div className='servicecard'>
                         <FaSearch className='servicelogo'/>

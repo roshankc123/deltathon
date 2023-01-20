@@ -1,16 +1,16 @@
 import React from 'react';
-import CropRecommend from '../components/croprecommendation/croprecommend';
+import Agropedia from '../components/agropedia/agropedia';
 import Footer from '../components/footer/footer';
 import Nav from '../components/nav/nav';
 
-const Croprecommendpage = () =>{
+const Agropediapage = () =>{
     return(
         <div className='servicespage'>
-            <CropRecommend/>
+            <Agropedia/>
             <Nav/>
             <Footer/>
         </div>
     )
 }
 
-export default Croprecommendpage;
+export default Agropediapage;

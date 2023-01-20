@@ -49,6 +49,7 @@ const Disease = () =>{
 
     const handlesubmit = async e => {
         e.preventDefault();
+        console.log(picture)
 
 
 
@@ -59,35 +60,12 @@ const Disease = () =>{
         else {
             let formData = new FormData()
             formData.append('name', modal.name);
-            // const byteCharacters = picture
-            // const byteNumbers = new Array(byteCharacters.length);
-            // for (let i = 0; i < byteCharacters.length; i++) {
-            //     byteNumbers[i] = byteCharacters.charCodeAt(i);
-            // }
-            // const byteArray = new Uint8Array(byteNumbers);
-            // const blob = new Blob([byteArray], { type: "image/jpg" });
-            // console.log(picture.src.split(','))
-            // console.log(picture.split(','))
-            // const y = picture.split(',');
+           
 
             formData.append("image", picture.split(',')[1]);
             console.log(formData)
 
-            // for (var [key, value] of formData.entries()) {
-            //     console.log(key, value);
-            // }
-
-            // fetch("https://192.168.10.69:8000/predictdisease", {
-            //     method: "POST",
-            //     body: formData,
-            //     headers: {
-            //         "Content-type": "multipart/form-data",
-            //     }
-            // })
-
-            //     .then(response => response.json())
-            //     .then(response => console.log(response.json))
-
+          
             const url = "#"
             const response = await fetch(url, {
                 method: 'POST',
@@ -97,27 +75,7 @@ const Disease = () =>{
                 body: formData,
 
             });
-            // axios({
-  
-            //     url: "https://192.168.10.69:8000/predictdisease",
-            //     method: "POST",
-            //     headers: {
-            
-            //       // Add any auth token here
-            //       authorization: "your token comes here",
-            //       "Content-type": "multipart/form-data",
-            //     },
-            
-            //     // Attaching the form data
-            //     data: formData,
-            //   })
-            
-            //     // Handle the response from backend here
-            //     .then((res) => { })
-            
-            //     // Catch errors if any
-            //     .catch((err) => { });
-            // }
+         
         }}
 
 

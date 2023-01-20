@@ -21,7 +21,9 @@
     }
 
 
-
+.possiblereport{
+    background-color: #F0F0F0;
+}
 
 
 .croplandingtop h1{
@@ -110,39 +112,16 @@
     
 }
 
-.possiblecontainer .possiblecard{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 5px;
-}
-.possiblecontainer .possiblecard .image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    padding:10px;
-    color:#819347
-
-}
-
-.possiblecontainer .possiblecard .cropname{
-    padding:10px;
-    color:#819347;
 
 
-
-}
-
-.possiblecontainer .possiblecard .cropname h1{
-    font-weight: 600;
+.possiblecontainer p{
+    text-align: left;
     font-size: 16px;
+    font-weight: 400;
     letter-spacing: 0.03em;
-
+    color: #819347;
+    margin-bottom: 15px;
+    line-height: 20px;
 }
 /* .possiblecontainer .possiblecard .cropname h2{
     font-weight: 500;
@@ -162,6 +141,20 @@
     justify-content: center;
     align-items: center;
     border-radius: 0px 10px 10px 0px;
+
+
+}
+.modal .inputs select{
+    background-color: none;
+    padding:5px 10px;
+    border:1px solid rgb(129, 147, 71, 0.3);
+    border-radius: 5px;
+    margin:5px 0;
+    color:#819347;
+    width: 88%;
+    font-family: Inter;
+    letter-spacing: 0.03em;
+    overflow-y: scroll;
 
 
 }
