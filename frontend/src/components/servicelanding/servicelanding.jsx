@@ -23,7 +23,7 @@ const Servicelanding = () =>{
                 </h1>
                 <div className='servicecontainer'>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
+                    <Link to="/services/croprecommend"><FaSearch className='servicelogo'/></Link>
                         <h3>Crop Recommendation</h3>
                     </div>
                     <div className='servicecard'>

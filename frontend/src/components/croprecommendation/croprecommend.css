@@ -1,0 +1,169 @@
+
+@media only screen and (max-width: 400px){
+    .croplandingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/cropbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 70vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Inter;
+
+       
+    }
+
+
+
+
+
+.croplandingtop h1{
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 0.03em;
+}
+
+.croplandingtop p{
+    font-size: 14px;
+    font-weight: 400;
+    padding:10px 0;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+}
+.croplandingtop h2{
+    background-color: #819347;
+    text-align: center;
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    width:200px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal .inputs{
+    text-align: left;
+    padding:20px 40px; 
+}
+.modal .input_field h4{
+    color:#819347;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+}
+.modal .input_field{
+    padding:3px 0;
+}
+.modal .input_field input{
+    padding:5px 10px;
+    border:1px solid rgb(129, 147, 71, 0.3);
+    border-radius: 5px;
+    margin:5px 0;
+    color:#819347;
+    width:80%;
+
+}
+
+.modal .inputs button{
+    padding:10px;
+    background-color: #819347;
+    color:white;
+    letter-spacing: 0.03em;
+    font-family: Inter;
+    font-size: 16px;
+    border:none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width:88%;
+}
+.possiblecontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+
+}
+.possiblereport{
+    padding:20px 20px;
+
+}
+
+.possiblereport h3{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #819347;
+    margin-bottom: 15px;
+    
+}
+
+.possiblecontainer .possiblecard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.possiblecontainer .possiblecard .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding:10px;
+    color:#819347
+
+}
+
+.possiblecontainer .possiblecard .cropname{
+    padding:10px;
+    color:#819347;
+
+
+
+}
+
+.possiblecontainer .possiblecard .cropname h1{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+
+}
+/* .possiblecontainer .possiblecard .cropname h2{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    
+} */
+
+
+.possiblecontainer .possiblecard .harvestbutton{
+    text-decoration: none;
+    background-color: #819347;
+    color:white;
+    padding:10px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+
+
+}
+
+}

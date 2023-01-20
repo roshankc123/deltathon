@@ -170,7 +170,7 @@ const SoilReport = () =>{
         <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
         <div className='reportmodalcontent'>
         <div className='title'>
-            <img src="../images/reportheader.png"></img><h1>Disease report on</h1>
+            <img src="../images/reportheader.png"></img><h1>Soil Report</h1>
         </div>
         <div className='reportcontent'>
             <div className='name'>Disease: <span>Jaundice</span></div>
