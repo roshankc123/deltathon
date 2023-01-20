@@ -290,7 +290,7 @@ data =  { 'Cauliflower' : [
 }
 
 
-for temp in data['Cauliflower']:
-    # endday = int(((temp['endtime']) - int(time.time())) / 86400)   #endtime means end
-    day = int((int(time.time()) - (temp['_time'])) / 86400)
-    print(day == temp['endday']) #temp['endday'])
+# for temp in data['Cauliflower']:
+#     # endday = int(((temp['endtime']) - int(time.time())) / 86400)   #endtime means end
+#     day = int((int(time.time()) - (temp['_time'])) / 86400)
+#     print(day == temp['endday']) #temp['endday'])
