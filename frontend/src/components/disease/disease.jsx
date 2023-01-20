@@ -4,7 +4,9 @@ import {MdDoubleArrow} from 'react-icons/md'
 import {GiPlantRoots} from 'react-icons/gi'
 import React, {useState} from 'react';
 import {AiFillCamera} from 'react-icons/ai'
-import {FaArrowLeft} from 'react-icons/fa'
+import {CiApple} from 'react-icons/ci'
+import {GiCorn} from 'react-icons/gi'
+import {FaArrowLeft,FaLeaf} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import {ImCross} from 'react-icons/im'
 
@@ -132,12 +134,12 @@ const Disease = () =>{
         {
             name:'Apple',
             image:'',
-            icon:<GiPlantRoots/>
+            icon:<CiApple/>
         },
         {
             name:'Maize',
             image:'',
-            icon:<GiPlantRoots/>
+            icon:<GiCorn/>
         },
         {
             name:'Rice',
@@ -147,7 +149,7 @@ const Disease = () =>{
         {
             name:'Potato',
             image:'',
-            icon:<GiPlantRoots/>
+            icon:<FaLeaf/>
         }
     ]
     console.log(modal)
@@ -163,7 +165,9 @@ const Disease = () =>{
         <div className='disease'>
             <div className='diseaselandingtop'>
                 <h1>Disease</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
+                <p>
+                    Select the crop below to detect the disease.
+                </p>
                 <div className='servicesearch'>
                     <input placeholder='Enter your plant'></input>
                     <div className='searchlogo'>
