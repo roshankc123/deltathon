@@ -1,7 +1,15 @@
 import React from 'react';
 import './servicelanding.css'
 import {FaSearch} from 'react-icons/fa'
+import {GiBugNet} from 'react-icons/gi'
+import {RiMedicineBottleLine} from 'react-icons/ri'
 import {MdDoubleArrow} from 'react-icons/md'
+import {VscMention} from 'react-icons/vsc'
+import {BiMailSend, BiMap} from 'react-icons/bi'
+import {GoBook} from 'react-icons/go'
+import {FiPhoneCall} from 'react-icons/fi'
+import {TbHeartbeat, TbReport} from 'react-icons/tb'
+
 import { Link } from 'react-router-dom';
 
 const Servicelanding = () =>{
@@ -23,40 +31,42 @@ const Servicelanding = () =>{
                 </h1>
                 <div className='servicecontainer'>
                     <div className='servicecard'>
-                    <Link to="/services/croprecommend"><FaSearch className='servicelogo'/></Link>
+                        <VscMention className='servicelogo'/>
                         <h3>Crop Recommendation</h3>
                     </div>
+                    
                     <div className='servicecard'>
-                        <Link to="/services/disease"><FaSearch className='servicelogo'/></Link>
+                        <Link to="/services/disease"><GiBugNet className='servicelogo'/></Link>
                         <h3>Disease Detection</h3>
                     </div>
                     <div className='servicecard'>
-                    <Link to="/services/fertilizerrecommend"><FaSearch className='servicelogo'/></Link>
+                        <RiMedicineBottleLine className='servicelogo'/>
                         <h3>Fertilizer Recommendation</h3>
                     </div>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
+                        <TbHeartbeat className='servicelogo'/>
                         <h3>Crop Monitoring</h3>
                     </div>
                     <div className='servicecard'>
-                    <Link to="/services/soil"><FaSearch className='servicelogo'/></Link>
+                    <Link to="/services/soil"><TbReport className='servicelogo'/></Link>
                         <h3>Soil Report</h3>
                     </div>
                     <div className='servicecard'>
-                        <Link to="/services/agropedia"><FaSearch className='servicelogo'/></Link>
+                        <Link to="/services/soil"><GoBook className='servicelogo'/></Link>
                         <h3>Agropedia</h3>
                     </div>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
-                        <h3>Soil Report</h3>
+                        <BiMailSend className='servicelogo'/>
+                        <h3>Report Doctor</h3>
                     </div>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
-                        <h3>Soil Report</h3>
+                        <FiPhoneCall className='servicelogo'/>
+                        <h3>Call a Doctor</h3>
                     </div>
                     <div className='servicecard'>
-                        <FaSearch className='servicelogo'/>
-                        <h3>Soil Report</h3>
+                        <Link to="/services/vetenarymaps"><BiMap className='servicelogo'/></Link>
+                        
+                        <h3>Vetenary Near Me</h3>
                     </div>
                     
                 </div>

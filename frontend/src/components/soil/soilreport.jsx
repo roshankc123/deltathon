@@ -117,12 +117,14 @@ const SoilReport = () =>{
         <div className='soilreport'>
             <div className='soillandingtop'>
                 <h1>Soil Profiling</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.</p>
+                <p>Soil Profiling is a technique to know about the type of soil.</p>
                 <div className='clickable'><h3>Know your soil</h3><AiFillCamera className='soilcamera' onClick={()=>setcameramodal(true)}/></div>
             </div>
             <div className='soilcontent'>
                 <h2>Why Soil Profiling?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
+                <p>
+                    Soil are of different types. It is very essential to know the type of soil as the choice of crops to sow and the amount of fertilizer to use. Our AI enabled system helps you to classify your soil type and maximize the yeild in your land.
+                </p>
 
             </div>
             {
